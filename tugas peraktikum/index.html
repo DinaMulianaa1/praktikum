@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pencarian Mahasiswa</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <nav><a href="index.html" class="active">Beranda</a><a href="mahasiswa.html">Data Mahasiswa</a><a href="form-mahasiswa.html">Tambah Mahasiswa</a></nav>
+
+    <section class="card identitas" id="kartuIdentitas">
+      <div class="foto">
+        <img id="fotoProfil" alt="Foto mahasiswa">
+        <div id="avatar" class="avatar"></div>
+        <small id="namaFoto"></small>
+        <label class="ganti-foto">Ganti foto<input type="file" id="inputFoto" accept="image/*" hidden></label>
+      </div>
+      <div class="info">
+        <h2>Identitas Mahasiswa</h2>
+        <p>Nama: <span id="idNama"></span></p>
+        <p>NIM: <span id="idNim"></span></p>
+        <p>Program Studi: <span id="idProdi"></span></p>
+        <p>Angkatan: <span id="idAngkatan"></span></p>
+        <div class="aksi">
+          <a class="btn btn-edit" id="btnEdit" href="form-mahasiswa.html">Edit</a>
+          <button type="button" class="btn btn-hapus" id="btnHapus">Hapus</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Pencarian Mahasiswa</h2>
+      <p class="desc">Cari mahasiswa berdasarkan NIM atau nama. Klik baris untuk menampilkan identitasnya.</p>
+      <label for="cari">Cari Mahasiswa</label>
+      <div class="search-wrap">
+        <input type="text" id="cari" placeholder="Ketik NIM atau nama..." autocomplete="off">
+        <button type="button" id="clearBtn" title="Hapus">&#x2715;</button>
+      </div>
+      <h3>Daftar Mahasiswa</h3>
+      <table>
+        <thead><tr><th>NIM</th><th>Nama Mahasiswa</th><th>Program Studi</th></tr></thead>
+        <tbody id="tabelBody"></tbody>
+      </table>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

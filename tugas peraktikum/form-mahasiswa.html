@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Mahasiswa</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <nav><a href="index.html">Beranda</a><a href="mahasiswa.html">Data Mahasiswa</a><a href="form-mahasiswa.html" class="active">Tambah Mahasiswa</a></nav>
+    <section class="card">
+      <h2 id="judulForm">Tambah Mahasiswa</h2>
+      <p class="desc" id="deskForm">Isi data mahasiswa baru.</p>
+      <form id="formMahasiswa" novalidate>
+        <label for="nim">NIM</label>
+        <input type="text" id="nim" name="nim">
+        <label for="nama">Nama Mahasiswa</label>
+        <input type="text" id="nama" name="nama">
+        <label for="prodi">Program Studi</label>
+        <select id="prodi" name="prodi">
+          <option>Teknik Informatika</option>
+          <option>Sistem Informasi</option>
+          <option>Manajemen Informatika</option>
+        </select>
+        <label for="angkatan">Angkatan</label>
+        <input type="text" id="angkatan" name="angkatan" maxlength="4" placeholder="contoh: 2025">
+        <label for="foto" id="labelFoto">Foto (opsional)</label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+        <button class="btn" type="submit" id="btnSimpan">Simpan</button>
+        <div id="pesan" class="msg"></div>
+      </form>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
